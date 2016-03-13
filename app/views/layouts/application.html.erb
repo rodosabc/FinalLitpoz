@@ -16,6 +16,12 @@
       src: local("SunFran"), /* проверяем наличие шрифта в ОС пользователя */
       url('<%=asset_url ('SF-UI-Text-Light.otf')%>'); /* 543если шрифт не установлен, тогда загружаем его по указанному пути, но что то не получается*/
     }
+    .right_menu {
+      width: 22.80%;
+      float: left;
+      padding: 10px;
+      transition: left 0.5s ease-out 0.25s;
+    }
     @media (max-width: 641px), (orientation:  portrait) {
       .header {
         height: 90px;
@@ -92,7 +98,7 @@
       }
 
     }
-  </style>
+  </style> <!--в будущем удалить -->
 </head>
 <body>
   <div class="header">
