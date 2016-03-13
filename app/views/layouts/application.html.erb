@@ -10,6 +10,13 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <style>
+    @font-face {
+      font-family: SunFran; /* имя шрифта для CSS правил */
+      src: local("SunFran"), /* проверяем наличие шрифта в ОС пользователя */
+      url('<%=asset_url ('SF-UI-Text-Light.otf')%>'); /* 543если шрифт не установлен, тогда загружаем его по указанному пути, но что то не получается*/
+    }
+  </style>
 </head>
 <body>
   <div class="header">
