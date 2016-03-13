@@ -16,6 +16,82 @@
       src: local("SunFran"), /* проверяем наличие шрифта в ОС пользователя */
       url('<%=asset_url ('SF-UI-Text-Light.otf')%>'); /* 543если шрифт не установлен, тогда загружаем его по указанному пути, но что то не получается*/
     }
+    @media (max-width: 641px), (orientation:  portrait) {
+      .header {
+        height: 90px;
+        margin-top: 0;
+        position: fixed;
+      }
+
+      .logo img{
+        height: 90px;
+        float: left;
+      }
+      .left_menu {
+        display: none;
+      }
+      .poem_view {
+        width: 95%;
+        margin-left: 3%;
+      }
+      .menu.menu_author{
+        margin-top: 15px;
+        display: block;
+      }
+      .right_menu {
+        position:fixed;
+        left: -280px;
+        width: 250px;
+        height: 100%;
+        margin-top:0;
+        background-color: white;
+        border-right: 2px solid #3399ff;
+        overflow: auto;
+      }
+
+      #content{
+        padding-top:90px;
+      }
+
+      .icon-menu {
+        display: block;
+      }
+
+      .right_menu.active{
+        left: 0;
+      }
+
+      .menu {
+        font-size: 1.2em;
+        margin: 0px auto;
+        border: 0px;
+      }
+
+      .menu nav ul li{
+        padding: 10px 0px;
+        margin-top: 0;
+      }
+      .menu nav ul:last-child{
+        border-bottom:1px solid #3399ff;
+      }
+
+      .menu.menu_author nav ul{
+        border: none;
+      }
+
+      .menu nav ul li:hover{
+        padding: 10px 0px;
+        margin-top: 0;
+      }
+      .element h6 {
+        margin: 0;
+        margin-top: 5px;
+        margin-right: 5px;
+        padding: 0;
+        float: right;
+      }
+
+    }
   </style>
 </head>
 <body>
