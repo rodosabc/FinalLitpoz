@@ -1,8 +1,4 @@
-@font-face {
-    font-family: SunFran; /* имя шрифта для CSS правил */
-    src: local("SunFran"), /* проверяем наличие шрифта в ОС пользователя */
-    url(font-path('SF-UI-Text-Light.otf')); /* 5453если шрифт не установлен, тогда загружаем его по указанному пути, но что то не получается*/
-}
+
 body{
     margin: 0;
     padding: 0;
