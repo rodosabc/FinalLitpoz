@@ -11,12 +11,7 @@ class HolidaysController < ApplicationController
 
   def create
     @holiday = Holiday.new(holiday_params)
-
-    if @holiday.save
-      redirect_to holidays_path
-    else
-      render 'new'
-    end
+    @holiday.save
   end
 
   def edit
@@ -25,20 +20,12 @@ class HolidaysController < ApplicationController
 
   def update
     @holiday = Holiday.find(params[:id])
-
-    if @holiday.update(holiday_params)
-      redirect_to holidays_path
-    else
-      render 'edit'
-    end
+    @holiday.update(holiday_params)
   end
 
   def destroy
     @holiday = Holiday.find(params[:id])
-
     @holiday.destroy
-
-    redirect_to holidays_path
   end
   private
 
