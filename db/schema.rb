@@ -11,34 +11,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160315134114) do
+ActiveRecord::Schema.define(version: 20160310030116) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "authors", force: :cascade do |t|
-    t.text "name"
-    t.text "description"
-    t.text "keywords"
+    t.string   "name"
+    t.text     "keywords"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "holidays", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "date"
+    t.text     "keywords"
+    t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.text     "description"
-    t.text     "keywords"
-    t.integer  "date"
-    t.string   "name"
   end
 
   create_table "poems", force: :cascade do |t|
     t.text     "text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.integer  "holiday_id"
     t.integer  "author_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "poems", "authors"
-  add_foreign_key "poems", "holidays"
 end

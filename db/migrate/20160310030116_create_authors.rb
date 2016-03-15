@@ -1,7 +1,9 @@
 class CreateAuthors < ActiveRecord::Migration
   def change
     create_table :authors do |t|
-      t.text :name
+      t.string :name
+      t.text :keywords
+      t.text :description
 
       t.timestamps null: false
     end
