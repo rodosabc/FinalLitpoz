@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'rails_admin'
+gem 'rails_12factor'
 
 gem 'will_paginate','~> 3.1.0'
 # Use ActiveModel has_secure_password

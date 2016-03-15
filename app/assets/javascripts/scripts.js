@@ -6,3 +6,6 @@ window.onload = function(){
         menu.classList.toggle('active');
     })
 }
+$(document).on('page:load', function() {
+    $(".icon-menu").click(function(t){ $(".right_menu").toggleClass("active")
+    })});
