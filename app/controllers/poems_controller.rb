@@ -5,7 +5,7 @@ class PoemsController < ApplicationController
 
   def index
     @resource = define_resource
-    @poems = @resource.poems
+    @poems = @resource.poems.page(params[:page]).per_page(5)
   end
 
   def new
