@@ -155,6 +155,50 @@ a {
     background-color: #ffffff;
 }
 
+/*PAGINATION*/
+.pagination{
+  width: 30%;
+  margin: 0 auto;
+  display: inline;
+}
+
+.pagination em{
+  background-color:#3399ff;
+  padding: 5px;
+  border-radius: 5px;
+  font-style: normal;
+  color:#fff;
+}
+
+.current a{
+  display: inline-block;
+  padding: 5px;
+}
+
+.current a:hover{
+  display: inline-block;
+  padding: 5px;
+  background-color:#3399ff;
+  border-radius: 5px;
+  text-color:#fff;
+}
+
+.next_page disabled{
+  display: none;
+}
+
+.previous_page disabled{
+  display: none;
+}
+
+.next_page{
+  display: none;
+}
+
+.previous_page{
+  display: none;
+}
+/*PAGINATION_END*/
 @media (max-width: 769px) {
     .header {
         height: 120px;

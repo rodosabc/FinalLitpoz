@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content=" ">
-  <meta name="keywords" content=" ">
+  <meta name="description" content="<%= (yield :description).presence || 'Стихотворения к праздникам' %>">
+  <meta name="keywords" content="<%= (yield :keywords).presence || 'cтихи,праздник,православие' %>">
   <meta name="robots" content="all">
   <title>
     <%= (yield :title).presence || 'Стихи' %>
@@ -57,8 +57,15 @@
         </nav>
       </div>
     </div>
-<%= yield %>
-    <!--Молитва перед выходом в Интернет
+    <%= yield %>
+  </div>
+    <div class="footer">
+      <div class="footer_c">
+        <p>design by kennystorm 2016</p>
+      </div>
+    </div>
+</body>
+<!--Молитва перед выходом в Интернет
 
 Господи Боже наш, Творче неба и земли, создавый человека и
 даровавый ему ведение сокровенной премудрости, во еже прославляти имя Твое,
@@ -74,11 +81,4 @@
 Да будут дела наши во славу Твою!
 Аминь.
 -->
-  </div>
-    <div class="footer">
-      <div class="footer_c">
-        <p>design by kennystorm 2016</p>
-      </div>
-    </div>
-</body>
 </html>

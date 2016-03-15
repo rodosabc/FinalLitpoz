@@ -5,6 +5,6 @@ if params[:holiday_id].present?
 return Holiday.find(params[:holiday_id])
 end-->
 <%title @resource.name%>
+<%description @resource.description%>
+<%keywords @resource.keywords%>
 <%= render 'common/poems'%>
-
-<%= will_paginate @poems %>
