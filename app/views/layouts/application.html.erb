@@ -7,8 +7,7 @@
   <meta name="keywords" content=" ">
   <meta name="robots" content="all">
   <title>
-    СТИХИ
-
+    <%= (yield :title).presence || 'Стихи' %>
   </title>
   <%= favicon_link_tag %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
@@ -32,7 +31,7 @@
         <nav>
           <ul>
             <%@authors.each do |author|%>
-                <a href="<%= author_poems_path(author) %>"><li><%=author.name%><%=author.id%></li></a>
+                <a href="<%= author_poems_path(author) %>"><li><%=author.name%></li></a>
             <%end%>
           </ul>
         </nav>
@@ -43,7 +42,7 @@
         <nav>
           <ul>
             <%@holidays.each do |holiday|%>
-                <a href="<%= holiday_poems_path(holiday) %>"><li><%=holiday.text%><%=holiday.id%></li></a>
+                <a href="<%= holiday_poems_path(holiday) %>"><li><%=holiday.name%></li></a>
             <%end%>
           </ul>
         </nav>
@@ -52,7 +51,7 @@
         <nav>
           <ul>
             <%@authors.each do |author|%>
-                <a href="<%= author_poems_path(author) %>"><li><%=author.name%><%=author.id%></li></a>
+                <a href="<%= author_poems_path(author) %>"><li><%=author.name%></li></a>
             <%end%>
           </ul>
         </nav>

@@ -4,7 +4,7 @@ class PoemsController < ApplicationController
   before_action :find_holiday_id, only: [:new,:create]
 
   def index
-    @resource = define_source
+    @resource = define_resource
     @poems = @resource.poems
   end
 
@@ -46,7 +46,7 @@ class PoemsController < ApplicationController
     params.require(:poem).permit(:text)
   end
 
-  def define_source
+  def define_resource
     if params[:author_id].present?
       return Author.find(params[:author_id])
     end
