@@ -1,2 +1,4 @@
-<%title @holiday.name%>
-<%= render 'common/poems'%>
+<% if @holiday.present? %>
+    <%title @holiday.name%>
+    <%= render 'common/poems'%>
+<%end%>
