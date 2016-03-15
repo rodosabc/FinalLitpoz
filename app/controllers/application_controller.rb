@@ -12,6 +12,6 @@ class ApplicationController < ActionController::Base
   end
 
   def all_holidays
-    @holidays = Holiday.all
+    @holidays = Holiday.order(:date)
   end
 end
